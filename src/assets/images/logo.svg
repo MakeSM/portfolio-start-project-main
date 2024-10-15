@@ -1,0 +1,11 @@
+<svg width="100" height="60" xmlns="http://www.w3.org/2000/svg">
+	<defs>
+	  <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+		 <stop offset="0%" style="stop-color:#00C0FD;stop-opacity:1" />
+		 <stop offset="100%" style="stop-color:#CA24B4;stop-opacity:1" />
+	  </linearGradient>
+	</defs>
+	<text x="10" y="30" font-family="Poppins" font-weight="700" font-size="16" fill="url(#gradient)" textLength="80" lengthAdjust="spacing">${'...'}</text>
+	<text x="10" y="48.03" font-family="Poppins" font-weight="700" font-size="16" fill="url(#gradient)" textLength="80" lengthAdjust="spacing">MakeSM</text>
+ </svg>
+ 
