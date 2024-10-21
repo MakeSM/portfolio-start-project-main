@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Menu } from '../../components/menu/Menu';
+import { Menu, MenuItem } from '../../components/menu/Menu';
 import { Logo } from '../../components/logo/Logo';
 
 // const item = ['Home', 'TechStack']
 
-const items = [
+const items:MenuItem[] = [
    {
       typeItem: 'link',
       label: 'Home',

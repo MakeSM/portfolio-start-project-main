@@ -4,16 +4,17 @@ import { Icon } from '../icon/Icon';
 
 
 
-// interface MenuItem {
-// 	typeItem: 'link' | 'icon';
-// 	label: string;
-// 	href?: string;
-// 	viewBox?: string;
-// }
+export type MenuItem = {
+	typeItem: 'link' | 'icon';
+	label: string;
+	href?: string;
+	viewBox?: string;
+}
 
 // (props: {menuItems: MenuItem[]})
 // (props: {menuItems: Array<{[key: string]: any}>})
-export const Menu = (props: {menuItems: Array<{[key: string]: any}>}) => {
+// export const Menu = (props: {menuItems: Array<{[key: string]: any}>}) => {
+export const Menu = (props: {menuItems: MenuItem[]})  => {
    return (
       <StyledMenu>
          <ul>
@@ -21,8 +22,13 @@ export const Menu = (props: {menuItems: Array<{[key: string]: any}>}) => {
 					return (
 						<li key={index}>
 							{/* {item.typeItem === 'link' ? ():()} */}
-							<a href={item.href}>{item.label}</a>
-							<a href={item.href}><Icon iconId={item.label} viewBox={item.viewBox} /></a>
+							{/* // <a href={item.href}>{item.label}</a>
+							// <a href={item.href}><Icon iconId={item.label} viewBox={item.viewBox} /></a> */}
+							{item.typeItem === 'link' ? (
+								<a href={item.href}>{item.label}</a>
+							) : (
+								<a href={item.href}><Icon iconId={item.label} viewBox={item.viewBox} /></a>
+							)}
 						</li>
 					)
 				})}
@@ -30,17 +36,6 @@ export const Menu = (props: {menuItems: Array<{[key: string]: any}>}) => {
       </StyledMenu>
    );
 };
-
-// 				{props.menuItems.map((item, index)=>{
-// 					return (
-// 						<li key={index}> 
-// 							{item.type ==='link' ? (
-// 								<a href={item.href}>{item.label}</a>
-// 							) : (
-// 								<a href={item.href}><Icon iconId={item.label viewBox={'0 0 30 30'} />}</a>
-// 							)}
-// 						</li>
-// 					))}
 
 // export const Menu = () => {
 //    return (
