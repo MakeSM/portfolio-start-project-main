@@ -3,50 +3,54 @@ import styled from 'styled-components';
 import { Menu } from '../../components/menu/Menu';
 import { Logo } from '../../components/logo/Logo';
 
+// const item = ['Home', 'TechStack']
+
 const items = [
    {
-      type: 'link',
+      typeItem: 'link',
       label: 'Home',
       href: '',
    },
    {
-      type: 'link',
+      typeItem: 'link',
       label: 'Tech Stack',
       href: '',
    },
    {
-      type: 'link',
+      typeItem: 'link',
       label: 'Projects',
       href: '',
    },
    {
-      type: 'link',
+      typeItem: 'link',
       label: 'Contact',
       href: '',
    },
    {
-      type: 'icon',
+      typeItem: 'icon',
       label: 'githubIcon',
       href: '',
+		viewBox:'0 0 30 30',
    },
    {
-      type: 'icon',
+      typeItem: 'icon',
       label: 'telegramIcon',
       href: '',
+		viewBox:'0 0 30 30',
    },
    {
-      type: 'icon',
+      typeItem: 'icon',
       label: 'linkedinIcon',
       href: '',
+		viewBox:'0 0 30 30',
    },
 ];
 
 export const Header = () => {
    return (
       <StyledHeader>
-         <Logo />
-         {/* <Menu menuItems={items}/> */}
-         <Menu />
+         <Logo typeLogo={'logoHeaderIcon'} />
+         <Menu menuItems={items}/>
       </StyledHeader>
    );
 };
@@ -58,4 +62,4 @@ const StyledHeader = styled.header`
    justify-content: center;
    gap: 306px;
 `;
-// 'Home', 'Tech Stack', 'Projects', 'Contact', '', '', '',
+
