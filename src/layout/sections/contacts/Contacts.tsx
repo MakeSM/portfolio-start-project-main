@@ -1,40 +1,43 @@
 import React from 'react';
 import styled from 'styled-components';
 import { FlexWrapper } from '../../../components/FlexWrapper';
+import { Container } from '../../../components/Container';
+import { theme } from '../../../assets/globalStyles/Theme';
 
 export const Contacts = () => {
    return (
       <StyledContacts>
-         <FlexWrapper align={'center'} direction={'column'}>
-            <StyledText>For any questions please mail me:</StyledText>
-            <StyledContact>Crispers7437@gmail.com</StyledContact>
-         </FlexWrapper>
+         <Container>
+            <FlexWrapper align={'center'} direction={'column'}>
+               <StyledText>For any questions please mail me:</StyledText>
+               <StyledContact>Crispers7437@gmail.com</StyledContact>
+            </FlexWrapper>
+         </Container>
       </StyledContacts>
    );
 };
 
-const StyledContacts = styled.div`
-   background-color: #191919;
-   min-height: 30vh;
+const StyledContacts = styled.section`
+   max-height: 100%;
 `;
 
 const StyledText = styled.span`
-font-weight: 700;
-font-size: 58px;
-line-height: 121%;
-letter-spacing: -0.02em;
-text-align: center;
-color: #ccc;
+   font-weight: 700;
+   font-size: 58px;
+   line-height: 121%;
+   letter-spacing: -0.02em;
+   text-align: center;
+   color: ${theme.colors.primaryFont};
 `;
 
 const StyledContact = styled.span`
-font-weight: 700;
-font-size: 58px;
-line-height: 121%;
-letter-spacing: -0.02em;
-text-align: center;
-background: linear-gradient(90deg, #13b0f5 2.6%, #e70faa 100%);
-background-clip: text;
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
+   font-weight: 700;
+   font-size: 58px;
+   line-height: 121%;
+   letter-spacing: -0.02em;
+   text-align: center;
+   background: ${theme.colors.accent};
+   background-clip: text;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
 `;
